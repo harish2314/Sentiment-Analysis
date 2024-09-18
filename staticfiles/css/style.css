@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat&family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth
+}
+
+body{
+    background-color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ----------------- HOME ---------------------- */
+
+header{
+    background-color: black;
+    color: #fff;
+}
+
+header h1{
+    padding: 30px;
+    text-align: center;
+    font-size: 36px;
+}
+
+.login_buttons{
+    text-align: center;
+    margin-top: 10%;
+}
+
+.login_buttons form{
+    display: inline;
+}
+
+.login_buttons form button{
+    background-color: #dedede;
+    padding: 30px;
+    margin-left: 30px;
+    font-size: 20px;
+    font-weight: bolder;
+    border-radius: 8px;
+    border: solid 3px;
+    cursor: pointer;
+}
+
+.login_buttons form button:hover{
+    background-color: #b9b9b9;
+    transition: .3s ease;
+}
+
+/* ------------------------------------------------- */
+
+/* ------------------Client Login Form-------------- */
+
+.login-form{
+    text-align: center;
+    margin-top: 5%;
+}
+
+.login-form form input{
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 3px;
+    border: 1px solid #858585;
+    width: 15%;
+    font-size: 12px;
+}
+
+.login-form form button{
+    padding: 10px 20px 10px 20px;
+    background-color:#000000e3 ;
+    color: #fff;
+    border: 1px solid ;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.login-form form button:hover{
+    background-color: #000;
+    transition: .3s ease;
+}
+
+.login-form .signup-link{
+    font-size: 14px;
+}
+
+.login-form .signup-link a{
+    text-decoration: none;
+    color: rgb(0, 106, 255);
+}
+
+/* ----------------------------------------------- */
+
+/* ---------------- Client Signup----------------- */
+
+.signup-form{
+    text-align: center;
+    margin-top: 2%;
+}
+
+.signup-form form input{
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 3px;
+    border: 1px solid #858585;
+    width: 15%;
+    font-size: 12px;
+}
+
+.signup-form form button{
+    padding: 10px 20px 10px 20px;
+    background-color:#000000e3 ;
+    color: #fff;
+    border: 1px solid ;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.signup-form form button:hover{
+    background-color: #000;
+    transition: .3s ease;
+}
+
+.signup-form .login-link{
+    font-size: 14px;
+}
+
+.signup-form .login-link a{
+    text-decoration: none;
+    color: rgb(0, 106, 255);
+}
+
+#error_message{
+    color: rgba(255, 0, 0, 0.88);
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+
+/* ----------------------------------------------- */
+
+/* --------------------- Product ----------------- */
+
+.heading{
+    margin-top: 3%;
+    display: flex;
+    align-items: center;
+}
+
+.heading form{
+    margin-right: 20px;
+    margin-left: auto;
+
+}
+
+.heading form button{
+    background-color: rgb(137, 16, 16);
+    padding: 3px 10px 3px 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: white;
+}
+
+.heading h1{
+    text-align: center;
+    font-size: 35px;
+    flex-grow: 1;
+    margin-left: 100px;
+}
+
+.heading h1 span{
+    padding-bottom: 5px;
+    border-bottom: #0065a4 10px solid;
+}
+
+.card-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 10% 0 10%;
+}
+
+.card{
+    width: 325px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 4%;
+    height: 350px;
+    transition: .3s ease;
+}
+
+.card:hover{
+    background-color: #ffc400;
+    transform: scale(1.05);
+    transition: .3s ease;
+}
+
+.card img{
+    width: inherit;
+    height: 75%;
+}
+
+.card .card-title{
+    text-align: center;
+    padding-top: 10px;
+}
+
+.card .card-title h1{
+    font-size: 25px;
+}
+
+.modal-body form label{
+    padding-bottom: 5px;
+}
+
+.modal-body form select{
+    margin-bottom: 30px;
+    width: 50%;
+    padding: 3px 10px 3px 10px;
+    border: #000 solid 1px;
+    border-radius: 6px;
+}
+
+.modal-body form select option{
+    font-size: 12px;
+    background-color: #00000042;
+}
+
+.modal-body form #review{
+    margin: 0 0 15px 0;
+    width: 100%;
+    height: 100px;
+    padding: 2px 0 0 2px;
+    border: #000 solid 1px;
+    border-radius: 6px;
+}
+
+#success_message_container{
+    margin-top: 3%;
+}
+
+#success_message{
+    text-align: center;
+    color: green;
+}

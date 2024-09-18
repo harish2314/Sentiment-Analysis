@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis</title>
+    
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <style>
+        body{
+            background-image: url("{% static 'images/home_background.jpg' %}");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: rgba(15, 12, 12, 0.637);
+            background-blend-mode: multiply;
+        }
+    </style>
+
+</head>
+<body>
+    
+    {% block content %}
+
+    <header>
+        <h1>Sentiment Analysis Based On Text Feedback</h1>
+    </header>
+    
+    <div class="login_buttons">
+        <form action="/client_login/" method="POST">
+            {% csrf_token %}
+            <button type="submit" class="client_button">Login as Client</button>
+        </form>
+        <form action="/admin/" method="POST">
+            {% csrf_token %}
+            <button type="submit" class="admin_button">Login as Admin</button>
+        </form>
+    </div>
+
+    {% endblock %}
+ 
+</body>
+</html>

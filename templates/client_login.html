@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+
+<header>
+    <h1>Sentiment Analysis Based On Text Feedback</h1>
+</header>
+
+<div class="login-form">
+    <h1>Login as Client</h1>
+    <br><br>
+    <form method="POST" action="">
+        {% csrf_token %}
+        <label for="username">Username</label><br>
+        <input type="email" id="username" name="username" placeholder="Enter your email-id">
+        <br><br>
+        <label for="password">Password</label><br>
+        <input type="password" id="password" name="password" placeholder="Enter password">
+        <br><br>
+        <button type="submit">Login</button>
+    </form>
+
+    <br><br>
+    {% if success_message %}
+        <p id="success_message">{{ success_message }}</p>
+    {% endif %}
+
+    {% if error_message %}
+        <p id="error_message">{{ error_message }}</p>
+    {% endif %}
+
+
+    <p class="signup-link">Don't have an account? <a href="{% url 'client_signup_view' %}">Signup</a></p>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+    var errorMessage = $("#error_message");
+    if (errorMessage.length > 0) {
+        errorMessage.delay(5000).fadeOut(400);
+    }
+});
+</script>
+
+{% endblock %}

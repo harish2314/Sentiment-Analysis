@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+
+<header>
+    <h1>Sentiment Analysis Based On Text Feedback</h1>
+</header>
+
+<div class="signup-form">
+    <h1>Signup as Client</h1>
+    <br><br>
+    <form method="POST" action="">
+        {% csrf_token %}
+        <label for="fullname">Fullname</label><br>
+        <input type="text" name="fullname" id="fullname" placeholder="Enter Fullname" required>
+        <br><br>
+
+        <label for="email">Email-ID</label><br>
+        <input type="email" name="email" id="email" placeholder="Enter Your Email-ID" required>
+        <br><br>
+
+        <label for="pass1">Password</label><br>
+        <input type="password" name="pass1" id="pass1" placeholder="Enter Password" required>
+        <br><br>
+
+        <label for="pass2">Confirm Password</label><br>
+        <input type="password" name="pass2" id="pass2" placeholder="Re-Enter Password" required>
+        <br><br>
+
+        <button type="submit">SignUp</button>
+    </form>
+
+    <br><br>
+    {% if success_message %}
+        <p id="success_message">{{ success_message }}</p>
+    {% endif %}
+
+    {% if error_message %}
+        <p id="error_message">{{ error_message }}</p>
+    {% endif %}
+
+
+    <p class="login-link">Already have an account? <a href="{% url 'client_login_view' %}">Login</a></p>
+</div>
+
+
+{% endblock %}
